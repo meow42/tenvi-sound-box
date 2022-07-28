@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/vant@3/lib/index.css"/>
+    <title>Tenvi Sound Box</title>
+    <style>
+      [v-cloak]{
+        display: none;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #app {
+        height: 100%;
+        max-width: 600px;
+        overflow: hidden;
+        /*display: grid;
+        grid-template-rows: 1fr auto;*/
+      }
+      .list {
+        height: 100%;
+        max-height: calc(100vh - 120px);
+      }
+      .tree-select {
+        height: 100% !important;
+        margin: 20px 0;
+      }
+      .audio {
+        width: 100%; 
+        padding: 20px 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      
+      <div class="list">
+        <!-- 选择列表 -->
+        <van-tree-select class="tree-select"
+          v-model:active-id="activeId"
+          v-model:main-active-index="activeIndex"
+          :items="items"
+          @click-item="itemClick">
+        </van-tree-select>
+      </div>
+      
+      <div class="audio">
+        <audio controls id="audio" style="width: 80%;">
+          <source src="" type="audio/mpeg">
+          您的浏览器不支持 audio 元素。
+        </audio>
+      </div>
+
+    </div>
+    <script src="https://fastly.jsdelivr.net/npm/vue@3"></script>
+    <script src="https://fastly.jsdelivr.net/npm/vant@3/lib/vant.min.js"></script>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
