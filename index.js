@@ -5,7 +5,7 @@ const vant = window['vant'];
 const soundBox = {
   data() {
     return {
-      domainURL: 'https://tenvix.meow42.cn/res/snd/effect-mp3/',
+      domainURL: 'https://tenvi.meow42.cn/res/snd/effect-mp3/',
       //sidebarActive: 0,
       //sidebarData: ['char', 'd-obj', 'etc', 'item', 'map', 'npc', 'skill', 'ui'],
       activeId: 1,

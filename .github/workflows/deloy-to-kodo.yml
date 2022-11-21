@@ -25,7 +25,7 @@ jobs:
         bucket: tenvi
         exclude: .cache,.git,.github,.gitignore
         dist: .
-        saveroot: sound-box
+        saveroot: app/sound
       env:
         UPTOC_UPLOADER_AK: ${{ secrets.QINIUAK }}
         UPTOC_UPLOADER_SK: ${{ secrets.QINIUSK }}
